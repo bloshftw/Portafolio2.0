@@ -1,0 +1,245 @@
+/* General */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #4c3f6e;
+    color: white;
+    scroll-behavior: smooth;
+}
+
+.main{
+    background-color: #4c3f6e;
+}
+
+/* Header */
+.header {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(../assets/images/banner.webp);
+    background-size: cover;
+    background-position: center; /* Asegura que la imagen se mantenga centrada */
+    background-repeat: no-repeat;
+}
+
+
+ /*LOGO*/
+.logo{
+    margin-left: 1em;
+}
+ /*LOGO*/
+/* Navegación */
+.nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 2;
+}
+
+.nav .links {
+    display: flex;
+    list-style: none;
+}
+
+.nav .links li {
+    margin: 0 10px;
+}
+
+.nav .links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Toggle botón */
+.nav .mobile-menu-icon {
+    display: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Intro */
+.intro {
+    z-index: 2;
+}
+
+.intro h1 {
+    font-size: 24px;
+    color: #ffd700;
+}
+
+.intro p {
+    font-size: 16px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    /* Menú en móviles */
+    .nav .links {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.3);
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .nav .links.active {
+        display: flex;
+    }
+
+    /* Mostrar el icono de menú en móviles */
+    .nav .mobile-menu-icon {
+        display: block;
+        font-size: 30px;
+    }
+    
+    .nav .links li {
+        margin: 10px 0;
+    }
+
+    .nav .links a {
+        font-size: 18px; /* Aumentamos el tamaño de la fuente en móviles */
+    }
+}
+
+/*SOBRE MI*/
+
+/* Sección Sobre Mí */
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #7763ab;
+    color: white;
+    border-radius: 10px;
+    margin: 25px auto;
+    max-width: 900px;
+    border: 3px solid #ffd700;
+}
+
+.about-section img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid #ffd700;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.about-section img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ffd700;
+}
+
+.about-section p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+/* Sección Habilidades */
+.skills-section {
+    padding: 40px 20px;
+    text-align: center;
+    justify-content: space-around;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.skills-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #ffd700;
+    
+}
+
+.skills-group {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.skills-group h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #66ff66;
+}
+
+.skills-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.skill img {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill span {
+    font-size: 14px;
+    color: white;
+    
+}
+
+.skill:hover{
+    transform: scale(1.2);
+    
+    
+}
+
+@media (max-width: 768px) {
+    .skills-icons {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .skill img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skill span {
+        font-size: 12px;
+    }
+}
