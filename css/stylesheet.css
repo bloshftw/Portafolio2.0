@@ -2,6 +2,7 @@
 body, html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     font-family: 'Press Start 2P', cursive;
     background-color: #4c3f6e;
     color: white;
@@ -520,8 +521,14 @@ margin: 25px auto;
     position: relative;
     bottom: 0;
     width: 100%;
-    height: 5em;
+    height: 4em;
     border-top: 3px solid #ffd700;
+}
+
+@media (max-width: 768px) {
+.footer{
+    height: 6em;
+}
 }
 
 .footer p {
