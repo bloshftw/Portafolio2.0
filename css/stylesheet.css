@@ -37,6 +37,7 @@ body, html {
  /*LOGO*/
 .logo{
     margin-left: 1em;
+    padding-bottom: 10px;
 }
  /*LOGO*/
 /* Navegación */
@@ -45,7 +46,7 @@ body, html {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content:end;
     align-items: center;
     padding: 10px 20px;
     z-index: 2;
@@ -57,6 +58,7 @@ body, html {
 .nav .links {
     display: flex;
     list-style: none;
+    margin-right: 15px;
 }
 
 .nav .links li {
@@ -74,6 +76,7 @@ body, html {
     display: none;
     color: white;
     cursor: pointer;
+    padding-right: 15px;
 }
 
 /* Intro */
@@ -518,11 +521,19 @@ margin: 25px auto;
     color: white;
     text-align: center;
     padding: 20px;
+    ;
     position: relative;
     bottom: 0;
     width: 100%;
     height: 4em;
     border-top: 3px solid #ffd700;
+}
+
+.footer-container{
+    max-height: 80%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
 }
 
 @media (max-width: 768px) {
